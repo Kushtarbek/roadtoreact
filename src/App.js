@@ -2,7 +2,7 @@ import './App.css';
 
 const list = [
   {
-    title: 'React',
+    title: 'React ',
     url: 'https://reactjs.org/',
     author: 'Jordan Walke',
     num_comments: 3,
@@ -10,7 +10,7 @@ const list = [
     objectID: 0,
   },
   {
-    title: 'Redux',
+    title: 'Redux ',
     url: 'https://redux.js.org/',
     author: 'Dan Abramov, Andrew Clark',
     num_comments: 2,
@@ -26,11 +26,11 @@ function List() {
       return (
       <li key={item.objectID}>
         <span>
-          <a href={item.url}> {item.title}</a>
+          <a href={item.url}> { item.title } </a>
         </span>
-        <span>{item.author}</span>
-        <span>{item.num_comments}</span>
-        <span>{item.points}</span>
+        <span>{ item.author }</span>
+        <span>{ item.num_comments }</span>
+        <span>{ item.points }</span>
       </li> 
       );
       })}
@@ -46,7 +46,8 @@ function App() {
           <label htmlFor="search">Search: </label>
           <input id='search' type='text'/>
           <hr/>
-          <List/>
+          <List list={list}/>
+          <List list={list}/>
           <button>Hello</button>
      
       </header>
